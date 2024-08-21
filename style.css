@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #191A1C;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    max-width: 90ch;
+    margin: 0 auto;
+}
+
+ion-icon {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.header h1 span {
+    color: #5E3DE1;
+}
+
+.header p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 100vh;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.social-links a {
+    margin: 0 1rem;
+}
+
