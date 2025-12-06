@@ -1,0 +1,214 @@
+/* ==============================
+   Basic Reset & Typography
+============================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: #0d0d0d;
+    color: white;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* ==============================
+   Custom Colors
+============================== */
+:root {
+    --background: #0d0d0d;
+    --white: #ffffff;
+    --white-icon: #b3b3b3;
+    --white-icon-tr: rgba(255, 255, 255, 0.1);
+    --sec: #5E3DE1; /* Updated primary color */
+}
+
+/* ==============================
+   Hero Section
+============================== */
+.hero {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero-content {
+    max-width: 64rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-intro p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--white-icon);
+}
+
+.hero-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.hero-main h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: transparent;
+    background: linear-gradient(90deg, #fff, #b3b3b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.hero-main p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 80%;
+    color: var(--white-icon);
+}
+
+.hero-main .text-sec {
+    color: transparent;
+    background: linear-gradient(135deg, var(--sec) 25%, #8A6DF7 50%, var(--sec) 75%); /* Updated gradient middle color */
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 2.5s ease-in-out infinite;
+}
+
+/* ==============================
+   Social Links
+============================== */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    padding-top: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: var(--white-icon);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--white);
+}
+
+.social-links svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+/* ==============================
+   Logo Wall
+============================== */
+.logo-wall-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-wall-title {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--white-icon);
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#logo-wall {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    filter: grayscale(80%);
+    opacity: 0.75;
+}
+
+.logo-wall-fade {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3rem;
+    z-index: 20;
+}
+
+.logo-wall-fade.left {
+    left: 0;
+    background-image: linear-gradient(to right, var(--background), transparent);
+}
+
+.logo-wall-fade.right {
+    right: 0;
+    background-image: linear-gradient(to left, var(--background), transparent);
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.3s;
+}
+
+.logo-item img {
+    height: 1.4rem;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.6;
+    transition: transform 0.3s, filter 0.3s, opacity 0.3s;
+}
+
+.logo-item:hover img {
+    transform: scale(1.15);
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.logo-item span {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+    color: var(--white-icon);
+}
+
+/* ==============================
+   Footer
+============================== */
+footer {
+    padding: 1.2rem;
+    text-align: center;
+    color: var(--white-icon);
+    border-top: 1px solid var(--white-icon-tr);
+    font-size: 0.9rem;
+}
+
+/* ==============================
+   Animations
+============================== */
+@keyframes shine {
+    0% { background-position: 100% 50%; }
+    30%, 70% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
